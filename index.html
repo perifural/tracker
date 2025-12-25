@@ -119,6 +119,8 @@
 
   const map = L.map("map").setView(DEFAULT_CENTER, DEFAULT_ZOOM);
 
+  map.attributionControl.setPrefix(false);
+
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: "© OpenStreetMap contributors"
