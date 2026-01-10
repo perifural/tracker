@@ -19,10 +19,10 @@ const col = db.collection(COL_NAME);
 
 // ===== INDEXES =====
 
-// TTL index — auto-delete after 5 minutes (TESTING)
+// TTL index — auto-delete after 6 hours
 await col.createIndex(
   { ts: 1 },
-  { expireAfterSeconds: 5 * 60 } // ⏱️ 5 minutes
+  { expireAfterSeconds: 6 * 60 * 60 } // ⏱️ 6 hours
 );
 
 // Query performance index
